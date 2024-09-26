@@ -23,6 +23,7 @@ module Bashly
     # its contents. If the file is not found, returns a string with a hint.
     def load_user_file(file, placeholder: true)
       path = user_file_path file
+      return "source \"$bin_pwd\"/#{path}"
 
       content = if File.exist? path
         File.read(path).remove_front_matter

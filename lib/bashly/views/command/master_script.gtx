@@ -1,4 +1,5 @@
 = view_marker
+> bin_pwd="$(cd "$(dirname "${BASH_SOURCE:-$0}")"; pwd)"
 
 = render :root_command if commands.empty?
 = render :version_command
